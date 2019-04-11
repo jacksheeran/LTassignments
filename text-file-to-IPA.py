@@ -2,7 +2,7 @@ import pronouncing
 
 import string
 
-import arpabet #imported from costum module created in 'arpabet.py'
+import arpabetmodule #imported from costum module created in 'arpabetmodule.py'
 
 def ipa(text):
 """converts text input to IPA"""
