@@ -2,7 +2,10 @@ import os
 
 import re
 
+"""Takes an album folder and returns a readable listing of track numbers and song titles."""
+
 def tracklisting(folder):
+    
     
     album = os.listdir(folder) #creates a list of tracks' file names
     
