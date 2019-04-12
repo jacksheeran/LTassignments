@@ -1,3 +1,5 @@
+from nltk.corpus import gutenberg
+
 def freqandfirstapp(textfilefromgutenberg, fromfreq, fromfirstapp):
     """Adapted from an early assignment to print all words appearing more than 30 times past sentence 200 from a Carroll novel.
        Function prints words from any input text from the NLTK Gutenburg corpus and prints words above the input frequency
