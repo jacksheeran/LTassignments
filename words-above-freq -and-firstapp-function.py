@@ -1,6 +1,6 @@
 from nltk.corpus import gutenberg
 
-def freqandfirstapp(textfilefromgutenberg, fromfreq, fromfirstapp):
+def freqandfirstapp(textfilefromgutenberg='carroll-alice.txt', fromfreq=30, fromfirstapp=200):
     """Adapted from an early assignment to print all words appearing more than 30 times past sentence 200 from a Carroll novel.
        Function prints words from any input text from the NLTK Gutenburg corpus and prints words above the input frequency
        and that appear after the input sentence number."""
@@ -41,5 +41,4 @@ def freqandfirstapp(textfilefromgutenberg, fromfreq, fromfirstapp):
        if freq[word] > fromfreq and firstapp[word] > fromfirstapp:
            print(word)
 
-           
-freqandfirstapp('carroll-alice.txt', 30, 200) #test
+          
