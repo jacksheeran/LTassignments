@@ -1,0 +1,23 @@
+Grammar and dictionary for a parser to build concrete syntax trees of 10 sentences:
+
+S -> S Punct
+S -> NP VP | NP AUX VP | NP VP NP VP
+NP -> Pronoun | Det Noun Noun | Noun Noun | Det Noun | Det Adj Noun | Noun Conj Noun | Noun | NP
+PP | NP PP PP
+VP -> Verb PP PP | Verb PP | Adv Verb Mark | Verb NP
+VP -> VP PP
+AUX -> Aux
+PP -> Prep NP
+# Lexicon
+Noun -> ’BBC’ | ’decade’ | ’CNN’ | ’Style’ | ’experience’ | ’Global’ | ’warming’ | ’change’ | ’pattern’ |
+’seasons’ | ’Davis’ | ’Cup’ | ’part’ | ’scheme’ | ’money’ | ’sponsorship’ | ’advertising’
+Verb -> ’worked’ | ’spoke’ | ’caused’ | ’wonder’ | ’played’ | ’makes’
+Pronoun -> ’He’ | ’She’ | ’I’
+Conj -> ’and’
+Det -> ’the’ | ’a’ | ’The’
+Adj -> ’rainy’
+Adv -> ’also’
+Mark -> ’whether’
+Prep -> ’for’ | ’to’ | ’of’ | ’about’ | ’in’ | ’through’
+Aux -> ’has’
+Punct -> ’.’
