@@ -49,7 +49,7 @@ import pronouncing
 import string
 
 def ipa_word(s):
-    """convers APRAbet to IPA"""
+    """Takes APRAbet as argument and returns it converted to IPA"""
     inipa = ''
     for x in s.split():
         x = x.rstrip(string.digits)
