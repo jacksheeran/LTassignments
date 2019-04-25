@@ -1,9 +1,11 @@
 import re, sys
 
-"""From assignment to rewrite the code for a basic lemmatizer, adding functions for specific words types that can cope with irregular 
-endings and compound words like 'aren't' and 'don't', and returns them in dictionary form, achieving above 98% accurracy on test texts."""
+# From assignment to rewrite the code for a basic lemmatizer, adding functions for specific words types that can cope with irregular 
+# endings and compound words like 'aren't' and 'don't', and returns them in dictionary form, achieving above 98% accurracy 
+# on pre-tagged test texts.
 
 def noun_lemma(word):
+    """returns lemma for nouns"""
     if word.endswith("s"):
         if word.endswith("ss"):
             return word.lower()
@@ -17,6 +19,7 @@ def noun_lemma(word):
         return word.lower()
 
 def verb_lemma(word):
+    """returns lemmma for verbs"""
     if word.endswith("ed"):
         if word[:-2].endswith("v"):
             return word[:-2].lower() + "e"
@@ -80,6 +83,7 @@ def verb_lemma(word):
     
 
 def adj_lemma(word):
+    """returns lemma for adjectives"""
     if word.endswith("er"):
         return word[:-2].lower()
     elif word != ("best") and word.endswith("est"):
@@ -88,6 +92,7 @@ def adj_lemma(word):
         return word.lower()
 
 def aux_lemma(word):
+    """returns lemma for auxiliaries"""
     if re.match(r"(does|did|doing)", word):
         return ("do")
     elif re.match(r"(had|has|'ve|having)", word):
@@ -100,12 +105,14 @@ def aux_lemma(word):
         return word.lower()
 
 def part_lemma(word):
+    """returns lemma for particles"""
     if word == ("n't"):
         return ("not")
     else:
         return word.lower()
 
 def pron_lemma(word):
+    """returns lemma for pronouns"""
     if re.match(r"(their|theirs|them|themselves)", word):
         return ("they")
     elif re.match(r"(his|him|himself)", word):
@@ -126,6 +133,7 @@ def pron_lemma(word):
         return word.lower()
 
 def det_lemma(word):
+    """returns lemma for determiners"""
     if word == ("an"):
         return ("a")
     else:
